@@ -1,0 +1,17 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Broadcast Message</h1>
+    <input id="userInput" placeholder="User" />
+    <input id="messageInput" placeholder="Message" />
+    <button id="sendButton" disabled>Send</button>
+    <ul id="messagesList"></ul>
+</div>
+
+@section Scripts {
+    <script src="~/js/site.js"></script>
+}
