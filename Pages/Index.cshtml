@@ -13,5 +13,7 @@
 </div>
 
 @section Scripts {
-    <script src="~/js/site.js"></script>
+    <!-- Make sure the SignalR script is correctly referenced before site.js -->
+    <script src="~/lib/microsoft-signalr/signalr.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
 }

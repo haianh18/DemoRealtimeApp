@@ -3,8 +3,11 @@
 
 // Write your JavaScript code.
 
-import * as signalR from "@microsoft/signalr";
-var connection = new signalR.HubConnectionBuilder().withUrl("/chathub").build();
+// Remove the import statement since SignalR is included in the _Layout.cshtml
+// import * as signalR from "@microsoft/signalr";
+
+// Use the globally available signalR object
+var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
 
 // Start the connection
 connection.start().then(function () {
@@ -20,12 +23,10 @@ document.getElementById("sendButton").addEventListener("click", function (event)
         return console.error(err.toString());
     });
     event.preventDefault();
-}, { once: true });
+});
 
-        connection.on("ReceiveMessage", function (user, message) {
-            var li = document.createElement("li");
-            document.getElementById("messagesList").appendChild(li);
-            li.textContent = user + " says " + message;
-        });
-   
-
+connection.on("ReceiveMessage", function (user, message) {
+    var li = document.createElement("li");
+    document.getElementById("messagesList").appendChild(li);
+    li.textContent = user + " says " + message;
+});

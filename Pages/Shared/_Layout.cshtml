@@ -1,6 +1,4 @@
-﻿
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -9,7 +7,6 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/DemoRealtimeApp.styles.css" asp-append-version="true" />
-    <script src="~/lib/signalr/dist/browser/signalr.js"></script>
 </head>
 <body>
     <header>
@@ -47,9 +44,7 @@
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    @* <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/5.0.11/signalr.min.js"></script> *@
-    <script src="/js/lib/signalr.min.js"></script>
-    <script src="~/js/site.js"></script>
+    
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
